@@ -1,18 +1,20 @@
 package com.algaworks.algafood.di.notificacao;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import com.algaworks.algafood.NivelUrgencia;
 import com.algaworks.algafood.TipoDoNotificador;
 import com.algaworks.algafood.di.modelo.Cliente;
 
-@TipoDoNotificador(NivelUrgencia.NORMAL)
+@Profile("dev")
+@TipoDoNotificador(NivelUrgencia.URGENTE)
 @Component
-public class NotificadorSMS implements Notificador {
+public class NotificadorEmailMock implements Notificador {
 
   private boolean caixaAlta;
 
-  public NotificadorSMS() {
-    System.out.println("Notificador SMS ");
+  public NotificadorEmailMock() {
+    System.out.println("Notificador Email Mock");
   }
 
   @Override
@@ -22,8 +24,8 @@ public class NotificadorSMS implements Notificador {
       mensagem = mensagem.toUpperCase();
     }
 
-    System.out.printf("Notificando %s através do celular %s: %s\n", cliente.getNome(),
-        cliente.getTelefone(), mensagem);
+    System.out.printf("MOCK: Notificação seria enviada para %s através do e-mail %s: %s\n",
+        cliente.getNome(), cliente.getEmail(), mensagem);
 
   }
 
