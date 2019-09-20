@@ -1,22 +1,15 @@
-package com.algaworks.algafood;
+package com.algaworks.algafood.config;
 
 // @Configuration
-public class AlgaConfig {
+public class NotificacaoConfig {
 
   // @Bean
   // public NotificadorEmail notificadorEmail() {
-  //
   // NotificadorEmail notificador = new NotificadorEmail("smtp.algamail.com.br");
   // notificador.setCaixaAlta(true);
   //
   // return notificador;
   // }
 
-  // @Bean
-  // public AtivacaoClienteService ativacaoClienteService() {
-  //
-  // return new AtivacaoClienteService(this.notificadorEmail());
-  //
-  // }
 
 }
