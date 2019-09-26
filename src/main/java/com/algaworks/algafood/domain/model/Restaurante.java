@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,6 +23,10 @@ public class Restaurante {
 
   @Column(name = "TAXA_FRETE")
   private BigDecimal taxaFrete;
+
+  @ManyToOne
+  @JoinColumn(name = "COZINHA_ID")
+  private Cozinha cozinha;
 
   public Long getId() {
     return id;
@@ -40,6 +46,14 @@ public class Restaurante {
 
   public BigDecimal getTaxaFrete() {
     return taxaFrete;
+  }
+
+  public Cozinha getCozinha() {
+    return cozinha;
+  }
+
+  public void setCozinha(Cozinha cozinha) {
+    this.cozinha = cozinha;
   }
 
   public void setTaxaFrete(BigDecimal taxaFrete) {
