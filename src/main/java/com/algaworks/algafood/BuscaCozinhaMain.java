@@ -13,11 +13,13 @@ public class BuscaCozinhaMain {
         new SpringApplicationBuilder(AlgafoodApiApplication.class).web(WebApplicationType.NONE)
             .run(args);
 
-    CadastroCozinha cadastroCozinha = applicationContext.getBean(CadastroCozinha.class);
+    CadastroCozinhaMain cadastroCozinha = applicationContext.getBean(CadastroCozinhaMain.class);
 
-    Cozinha cozinha = cadastroCozinha.buscar(1L);
-
-    System.out.println(cozinha.getNome());
+    Cozinha cozinha = new Cozinha();
+    cozinha.setId(1L);
+    cozinha.setNome("Brasileira");
+    
+    cadastroCozinha.adicionar(cozinha);
 
 
 

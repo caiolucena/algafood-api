@@ -13,7 +13,7 @@ public class InclusaoCozinhaMain {
         new SpringApplicationBuilder(AlgafoodApiApplication.class).web(WebApplicationType.NONE)
             .run(args);
 
-    CadastroCozinha cadastroCozinha = applicationContext.getBean(CadastroCozinha.class);
+    CadastroCozinhaMain cadastroCozinha = applicationContext.getBean(CadastroCozinhaMain.class);
 
     Cozinha cozinha1 = new Cozinha();
     cozinha1.setNome("Brasileira");

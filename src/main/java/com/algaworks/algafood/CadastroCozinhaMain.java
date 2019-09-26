@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import com.algaworks.algafood.domain.model.Cozinha;
 
 @Component
-public class CadastroCozinha {
+public class CadastroCozinhaMain {
 
   @PersistenceContext
   private EntityManager manager;
