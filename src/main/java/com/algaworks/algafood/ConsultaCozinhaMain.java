@@ -14,14 +14,14 @@ public class ConsultaCozinhaMain {
         new SpringApplicationBuilder(AlgafoodApiApplication.class).web(WebApplicationType.NONE)
             .run(args);
 
-    CadastroCozinhaMain cadastroCozinha = applicationContext.getBean(CadastroCozinhaMain.class);
+    CadastroCozinha cadastroCozinha = applicationContext.getBean(CadastroCozinha.class);
 
     List<Cozinha> cozinhas = cadastroCozinha.listar();
 
     for (Cozinha cozinha : cozinhas) {
-      
+
       System.out.println(cozinha.getNome());
-      
+
     }
 
   }
