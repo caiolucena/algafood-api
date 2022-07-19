@@ -9,6 +9,7 @@ import java.util.List;
 
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
 public class Grupo {
 
     @EqualsAndHashCode.Include

@@ -10,18 +10,18 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "CIDADE")
+@Table
 public class Cidade {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @Column(name = "NOME")
+  @Column
   private String nome;
 
   @ManyToOne
-  @JoinColumn(name = "ESTADO_ID")
+  @JoinColumn(name = "estado_id")
   private Estado estado;
 
   public Long getId() {

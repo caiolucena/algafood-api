@@ -2,7 +2,6 @@ package com.algaworks.algafood.domain.model;
 
 import javax.persistence.*;
 
-@Entity
 @Embeddable
 public class Endereco {
 
